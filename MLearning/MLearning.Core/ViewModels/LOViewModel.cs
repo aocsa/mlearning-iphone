@@ -40,13 +40,15 @@ namespace MLearning.Core.ViewModels
 
 		string _serialized_list;
 
-		public void Init(int lo_id,string serialized_los_in_circle)
+		async public void Init(int lo_id,string serialized_los_in_circle)
 		{
 			//LoadPages(selectedLOIndex);
 
 			LOID = lo_id;
 
-			_serialized_list = serialized_los_in_circle; 
+			_serialized_list = serialized_los_in_circle;
+
+			await InitLoad();
 
 		}
 

@@ -12,7 +12,9 @@ namespace MLearning.iPhone
 	public class LOsScrollView : UIView
 	{ 
 		string fontname = "HelveticaNeue";
+
 		nfloat CHeight = 198 , CWidth = 320 ;
+
 		List<string> lo_names = new List<string> () { };//{"Literatura", "Humanidades", "Computacion", "Algebra", "Filosofia"};
 
 		public event DoOpenLOEventHandler DoOpenLO ;

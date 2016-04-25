@@ -131,6 +131,8 @@ namespace MLearning.Core.ViewModels
             CurrentLOIDSelected = Constants.NoSelection;
             LoadCircles();
 
+			if (this.CirclesList.Count > 0)
+				LoadLearningObjects(0);
 
             NotificationHandler.Properties.PropertyChanged += new System.ComponentModel.PropertyChangedEventHandler(Global_PropertyChanged);
 
@@ -614,11 +616,11 @@ namespace MLearning.Core.ViewModels
             try
             {
                 var watch = Stopwatch.StartNew();
-                await LoadCircleTags(CircleID);
-                await LoadPostsInCircle(CircleID);
-                await LoadUsersInCircle(CircleID);
+              //  await LoadCircleTags(CircleID);
+               // await LoadPostsInCircle(CircleID);
+               // await LoadUsersInCircle(CircleID);
                 await LoadLearningObjects(CircleID);
-                await LoadQuizzes(CircleID);
+               // await LoadQuizzes(CircleID);
 
                 watch.Stop();
 

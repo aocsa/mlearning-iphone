@@ -54,10 +54,13 @@ namespace MLearning.iPhone
 					if (vm.LOsInCircle != null)
 					{
 						vm.LOsInCircle.CollectionChanged += LOsInCircle_CollectionChanged;
+
+						LoadPagesDataSource ();
+
 					}
 				}
 			};
-			LoadPagesDataSource ();
+
 
 
 

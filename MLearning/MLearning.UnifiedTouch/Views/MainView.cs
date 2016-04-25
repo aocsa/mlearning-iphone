@@ -100,6 +100,8 @@ namespace MLearning.iPhone
 			los_scroll = new LOsScrollView (new CGRect (0,48,320,198));
 			los_scroll.DoOpenLO += (sender, lo_index) => {
 				var vm1 = ViewModel as MainViewModel;
+
+
 				vm1.OpenLOCommand.Execute(vm1.LearningOjectsList[0]);
 				LoadingView = new LoadingOverlay(new CGRect(0,0,320,568));
 				View.Add(LoadingView);
@@ -196,7 +198,12 @@ namespace MLearning.iPhone
 			var vm = ViewModel as MainViewModel;
 			if (vm.CirclesList != null) _circlelist.CirclesList = vm.CirclesList;
 			vm.PropertyChanged += (sender, e) => {
-				if(e.PropertyName == "CirclesList") _circlelist.CirclesList = vm.CirclesList;
+				if(e.PropertyName == "CirclesList") 
+					_circlelist.CirclesList = vm.CirclesList;
+
+				//if (e.PropertyName == "CirclesList")
+					//vm.SelectCircleCommand.Execute(vm.CirclesList[0]);
+
 			};
 				
 		}
